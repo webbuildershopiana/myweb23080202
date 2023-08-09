@@ -67,7 +67,7 @@
 
 <style type="text/css">
 
-* { box-sizing: border-box; } body {margin: 0;}#itusz{background-image:url('https://dkcut7rvj02cb.cloudfront.net/files/myweb23080202/ASSET/ambuja-cement-rhs.jpg');background-repeat:no-repeat;background-position:center center;background-attachment:scroll;background-size:cover;}#i79n{background-color:#212f3c;}#imfsw{color:white;cursor:copy;display:flex;}#iv4gg{color:white;padding:40px 40px 40px 40px;border:1px solid black;}#ilcld{display:flex;}#i6o0k{color:white;}@media (max-width: 768px){#imfsw{background-color:green;}}@media (max-width: 415px){#imfsw{background-color:blue;}}
+* { box-sizing: border-box; } body {margin: 0;}#itusz{background-image:url('https://dkcut7rvj02cb.cloudfront.net/files/myweb23080202/ASSET/ambuja-cement-rhs.jpg');background-repeat:no-repeat;background-position:center center;background-attachment:scroll;background-size:cover;}#i79n{background-color:#212f3c;}#imfsw{color:white;cursor:copy;display:flex;}#iv4gg{color:white;padding:40px 40px 40px 40px;border:1px solid black;}#ilcld{display:flex;}#i6o0k{color:white;}#igoxaf{color:white;}@media (max-width: 768px){#imfsw{background-color:green;}}@media (max-width: 415px){#imfsw{background-color:blue;}}
 
 </style>
 
@@ -75,6 +75,9 @@
 		<html>
  <head></head>
  <body id="i79n">
+  <section id="igoxaf" class="bdg-sect">
+   <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+  </section>
   <div class="container">
    <a href="" id="ic3k2">Form Trait</a>
    <div class="row p-2 row-cols-1 row-cols-sm-2 row-cols-md-1">
@@ -105,12 +108,68 @@
     <div id="ibvz6" class="col">
      <form method="get" id="iv4gg" action="https://dummyjson.com/products/add">
       <div id="i84w8" class="mb-3">
-       <label for="title" id="iv9v4" class="form-label">title</label><input type="text" id="exampleInputEmail1" aria-describedby="emailHelp" name="title" placeholder="enter name" required class="form-control">
+       <label for="title" id="iv9v4" class="form-label">title</label><input type="text" id="exampleInputEmail1" aria-describedby="emailHelp" name="title" placeholder="enter title" required class="form-control">
       </div><button type="submit" id="ipzkr" class="btn btn-primary">Submit</button>
      </form>
     </div>
    </div>
   </div>
+  <div class="container">
+   <div class="row p-2 row-cols-1 row-cols-sm-2 row-cols-md-1">
+    <div class="col"></div>
+   </div>
+  </div>
+  <script>var props = {"iv4gg":{"name":"myForm","target":"_self","method":"POST","url":"https://dummyjson.com/products/add"}};
+          var ids = Object.keys(props).map(function(id) { return '#'+id }).join(',');
+          var els = document.querySelectorAll(ids);
+          for (var i = 0, len = els.length; i < len; i++) {
+            var el = els[i];
+            (function ({ name, target, method, url }) {
+        // const submitButton = this.querySelector('[type=submit]'); // Find the submit button
+        if (name && url && method) {
+            const form = this;
+            this.addEventListener('submit', (e) => {
+                e.preventDefault(); // Prevent the default form submission
+                // Create a new FormData object
+                const formData = new FormData(form);
+                formData.append('emailEnabled', false);
+                formData.append('formName', name);
+                // Perform an API call using fetch and Promises
+                fetch(url, {
+                    method: 'POST',
+                    // headers: {
+                    //     'Content-Type': 'application/json',
+                    // },
+                    body: formData,
+                })
+                    .then(response => {
+                    if (response.ok) {
+                        // API call successful
+                        return response.json();
+                    }
+                    else {
+                        // API call failed
+                        throw new Error('API call failed');
+                    }
+                })
+                    .then(responseData => {
+                    console.log('API response:', responseData);
+                    // Your custom script logic here
+                })
+                    .catch(error => {
+                    console.error('Error during API call:', error);
+                });
+                // Output form data object to the console
+                // console.log('Form data:', formData);
+                // Your custom script logic here
+            });
+            // }
+        }
+        else {
+            console.log('somthing went wrong');
+        }
+    }.bind(el))(props[el.id]);
+          }</script>
  </body>
 </html>
 </html>
