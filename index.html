@@ -116,23 +116,40 @@
   </div>
   <div class="container">
    <div class="row p-2 row-cols-1 row-cols-sm-2 row-cols-md-1">
-    <div class="col"></div>
+    <div class="col">
+     <form id="i7ca06">
+      <div class="mb-3">
+       <label for="exampleInputEmail1" class="form-label">Email address</label><input type="email" id="exampleInputEmail1-2" aria-describedby="emailHelp" class="form-control">
+       <div id="emailHelp" class="form-text">
+        We'll never share your email with anyone else.
+       </div>
+      </div>
+      <div class="mb-3">
+       <label for="exampleInputPassword1" class="form-label">Password</label><input type="password" id="exampleInputPassword1" class="form-control">
+      </div>
+      <div class="mb-3 form-check">
+       <input type="checkbox" id="exampleCheck1" class="form-check-input"><label for="exampleCheck1" class="form-check-label">Check me out</label>
+      </div><button type="submit" class="btn btn-primary">Submit</button>
+     </form>
+    </div>
    </div>
   </div>
-  <script>var props = {"iv4gg":{"name":"myForm","target":"_self","method":"POST","url":"https://dummyjson.com/products/add"}};
+  <script>var props = {"iv4gg":{"name":"myForm","target":"_self","method":"POST","url":"https://dummyjson.com/products/add","emailenable":true},"i7ca06":{"name":"myForm","target":"_self","method":"POST","url":"https://stgapi.shopiana.in/api/v1/wbWebsite/1900/form/formData?store=myweb23080202","emailenable":true}};
           var ids = Object.keys(props).map(function(id) { return '#'+id }).join(',');
           var els = document.querySelectorAll(ids);
           for (var i = 0, len = els.length; i < len; i++) {
             var el = els[i];
-            (function ({ name, target, method, url }) {
+            (function ({ name, target, method, url, emailenable }) {
         // const submitButton = this.querySelector('[type=submit]'); // Find the submit button
-        if (name && url && method) {
+        console.log(name, url, emailenable);
+        console.log(`unused parameter: ${target} ${method}`);
+        if (name) {
             const form = this;
             this.addEventListener('submit', (e) => {
                 e.preventDefault(); // Prevent the default form submission
                 // Create a new FormData object
                 const formData = new FormData(form);
-                formData.append('emailEnabled', false);
+                formData.append('emailEnabled', emailenable);
                 formData.append('formName', name);
                 // Perform an API call using fetch and Promises
                 fetch(url, {
@@ -159,9 +176,6 @@
                     .catch(error => {
                     console.error('Error during API call:', error);
                 });
-                // Output form data object to the console
-                // console.log('Form data:', formData);
-                // Your custom script logic here
             });
             // }
         }
