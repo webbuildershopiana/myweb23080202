@@ -67,7 +67,7 @@
 
 <style type="text/css">
 
-* { box-sizing: border-box; } body {margin: 0;}#itusz{background-image:url('https://dkcut7rvj02cb.cloudfront.net/files/myweb23080202/ASSET/ambuja-cement-rhs.jpg');background-repeat:no-repeat;background-position:center center;background-attachment:scroll;background-size:cover;}#i79n{background-color:#212f3c;}#imfsw{color:white;cursor:copy;display:flex;}#i6o0k{color:white;}#igoxaf{color:white;}#igac9l{color:white;padding:20px 20px 20px 20px;}@media (max-width: 768px){#imfsw{background-color:green;}}@media (max-width: 415px){#imfsw{background-color:blue;}}
+* { box-sizing: border-box; } body {margin: 0;}#itusz{background-image:url('https://dkcut7rvj02cb.cloudfront.net/files/myweb23080202/ASSET/ambuja-cement-rhs.jpg');background-repeat:no-repeat;background-position:center center;background-attachment:scroll;background-size:cover;}#i79n{background-color:#212f3c;}#imfsw{color:white;cursor:copy;display:flex;}#i6o0k{color:white;}#igoxaf{color:white;}#igac9l{color:white;padding:20px 20px 20px 20px;}#ip8rrg{height:400px;}#idpn9w{height:400px;}#ift5gu{height:400px;}@media (max-width: 768px){#imfsw{background-color:green;}}@media (max-width: 415px){#imfsw{background-color:blue;}}
 
 </style>
 
@@ -107,7 +107,7 @@
    <div class="row p-2 row-cols-1 row-cols-sm-2 row-cols-md-1">
     <div class="col">
      <form id="igac9l">
-      <div class="mb-3" id="it65n5">
+      <div id="it65n5" class="mb-3">
        <label for="exampleInputEmail1" class="form-label">Email address</label><input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" required placeholder="Enter your email here" class="form-control">
        <div id="emailHelp" class="form-text">
         We'll never share your email with anyone else.
@@ -125,7 +125,7 @@
   </div>
   <div class="container">
    <div class="row p-2 row-cols-1 row-cols-sm-2 row-cols-md-1">
-    <div class="col">
+    <div class="col" id="i1vbl">
      <div id="carouselExampleCaptions-92b2767a-569d-44cd-8c69-2a9f5dd976a2" data-bs-ride="carousel" class="carousel slide">
       <div class="carousel-inner">
        <div class="carousel-item active">
@@ -153,7 +153,7 @@
       <div type="button" data-bs-target="#carouselExampleCaptions-92b2767a-569d-44cd-8c69-2a9f5dd976a2" data-bs-slide="prev" class="carousel-control-prev">
        <span aria-hidden="true" class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span>
       </div>
-      <div type="button" data-bs-target="#carouselExampleCaptions-92b2767a-569d-44cd-8c69-2a9f5dd976a2" data-bs-slide="next" class="carousel-control-next" id="isvlrc">
+      <div type="button" data-bs-target="#carouselExampleCaptions-92b2767a-569d-44cd-8c69-2a9f5dd976a2" data-bs-slide="next" id="isvlrc" class="carousel-control-next">
        <span aria-hidden="true" class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span>
       </div>
      </div>
@@ -167,8 +167,6 @@
             var el = els[i];
             (function ({ name, target, method, url, emailenable }) {
         // const submitButton = this.querySelector('[type=submit]'); // Find the submit button
-        // console.log(name, url, emailenable);
-        // console.log(`unused parameter: ${target} ${method}`);
         if (name) {
             const form = this;
             this.addEventListener('submit', (e) => {
@@ -179,7 +177,7 @@
                 formData.append('formName', name);
                 // Perform an API call using fetch and Promises
                 fetch(url, {
-                    method: 'POST',
+                    method: method,
                     // headers: {
                     //     'Content-Type': 'application/json',
                     // },

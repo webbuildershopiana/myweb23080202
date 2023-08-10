@@ -123,8 +123,6 @@
             var el = els[i];
             (function ({ name, target, method, url, emailenable }) {
         // const submitButton = this.querySelector('[type=submit]'); // Find the submit button
-        // console.log(name, url, emailenable);
-        // console.log(`unused parameter: ${target} ${method}`);
         if (name) {
             const form = this;
             this.addEventListener('submit', (e) => {
@@ -135,7 +133,7 @@
                 formData.append('formName', name);
                 // Perform an API call using fetch and Promises
                 fetch(url, {
-                    method: 'POST',
+                    method: method,
                     // headers: {
                     //     'Content-Type': 'application/json',
                     // },
