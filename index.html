@@ -66,7 +66,7 @@
 
 <style type="text/css">
 
-* { box-sizing: border-box; } body {margin: 0;}#i79n{background-color:#212f3c;}
+* { box-sizing: border-box; } body {margin: 0;}#i79n{background-color:#212f3c;}#i0ax9{color:white;}
 
 </style>
 
@@ -84,7 +84,7 @@
      <div id="collapse-68b2c93a-1b8e-4166-a4eb-db4d4e41902a" class="collapse navbar-collapse">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
        <li class="nav-item"><a aria-current="page" href="#" class="nav-link active">Home</a></li>
-       <li class="nav-item"><a href="#" id="i8p53" class="nav-link">About</a></li>
+       <li class="nav-item"><a page="page://3ojbql9JkQVQqEygb" name="About" slug="about" href="//myweb-shopiana-webbuilder-production.vercel.app/about.html" link-type="page" id="i8p53" class="nav-link">About</a></li>
        <li class="nav-item dropdown">
         <ul aria-labelledby="navbarDropdown" class="dropdown-menu">
          <li><a href="#" class="dropdown-item">Action</a></li>
@@ -94,13 +94,64 @@
          <li><a href="#" class="dropdown-item">Something else here</a></li>
         </ul></li>
       </ul>
-      <form method="get" class="d-flex">
-       <input type="search" placeholder="Search" aria-label="Search" class="form-control me-2"><button type="submit" class="btn btn-outline-success">Search</button>
+      <form method="get" id="ifxuw" class="d-flex">
+       <input type="search" required placeholder="Search" aria-label="Search" class="form-control me-2"><button type="submit" class="btn btn-outline-success">Search</button>
       </form>
      </div>
     </div>
    </nav>
   </div>
+  <div id="i0ax9">
+   home page
+  </div>
+  <script>var props = {"ifxuw":{"name":"","target":"_self","method":"POST","url":"https://stgapi.shopiana.in/api/v1/wbWebsite/1900/form/formData?store=myweb23080202","emailenable":false}};
+          var ids = Object.keys(props).map(function(id) { return '#'+id }).join(',');
+          var els = document.querySelectorAll(ids);
+          for (var i = 0, len = els.length; i < len; i++) {
+            var el = els[i];
+            (function ({ name, target, method, url, emailenable }) {
+        // const submitButton = this.querySelector('[type=submit]'); // Find the submit button
+        if (name) {
+            const form = this;
+            this.addEventListener('submit', (e) => {
+                e.preventDefault(); // Prevent the default form submission
+                // Create a new FormData object
+                const formData = new FormData(form);
+                formData.append('emailEnabled', emailenable);
+                formData.append('formName', name);
+                // Perform an API call using fetch and Promises
+                fetch(url, {
+                    method: method,
+                    // headers: {
+                    //     'Content-Type': 'application/json',
+                    // },
+                    body: formData,
+                })
+                    .then(response => {
+                    if (response.ok) {
+                        // API call successful
+                        return response.json();
+                    }
+                    else {
+                        // API call failed
+                        throw new Error('API call failed');
+                    }
+                })
+                    .then(responseData => {
+                    console.log('API response:', responseData);
+                    // Your custom script logic here
+                })
+                    .catch(error => {
+                    console.error('Error during API call:', error);
+                });
+            });
+            // }
+        }
+        else {
+            console.log('somthing went wrong');
+        }
+    }.bind(el))(props[el.id]);
+          }</script>
  </body>
 </html>
 </html>
