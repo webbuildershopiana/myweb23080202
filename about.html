@@ -66,7 +66,7 @@
 
 <style type="text/css">
 
-* { box-sizing: border-box; } body {margin: 0;}
+* { box-sizing: border-box; } body {margin: 0;}#i02jr{background-color:#212f3c;}
 
 </style>
 
@@ -74,95 +74,33 @@
 		<html>
  <head></head>
  <body id="i02jr">
-  <div id="ip95wf" class="container-fluid">
-   <div id="ibiy7q" class="row p-2 row-cols-1 row-cols-sm-2 row-cols-md-1">
-    <div id="iq1tei" class="col">
-     <nav class="navbar navbar-expand-lg navbar-light border">
-      <div class="container-fluid">
-       <a href="#" class="navbar-brand">Navbar</a>
-       <div type="button" data-bs-toggle="collapse" data-bs-target="#collapse-be61621c-c342-43f2-bae7-c3cb9e612d0f" aria-controls="collapse-be61621c-c342-43f2-bae7-c3cb9e612d0f" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
-        <span class="navbar-toggler-icon"></span>
-       </div>
-       <div id="inx3h4" class="collapse navbar-collapse">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-         <li id="ihmna" class="nav-item"><a page="page://DtE6PH0uad2DjsEK" name="index" slug="index" href="//myweb-shopiana-webbuilder-production.vercel.app/index.html" new-tab link-type="page" id="i72zg" class="nav-link active">Home</a></li>
-         <li id="iu4wc" class="nav-item"><a page="page://3ojbql9JkQVQqEygb" name="About" slug="about" href="//myweb-shopiana-webbuilder-production.vercel.app/about.html" new-tab link-type="page" id="ipdw4" class="nav-link active">About</a></li>
-         <li id="i41xo" class="nav-item"><a url="https://www.google.com/" href="https://www.google.com/" new-tab link-type="url" id="ibm0j" class="nav-link active">Google</a></li>
-         <li class="nav-item"></li>
-         <li class="nav-item dropdown">
-          <ul aria-labelledby="navbarDropdown" class="dropdown-menu">
-           <li><a href="#" class="dropdown-item">Action</a></li>
-           <li><a href="#" class="dropdown-item">Another action</a></li>
-           <li>
-            <hr class="dropdown-divider"></li>
-           <li><a href="#" class="dropdown-item">Something else here</a></li>
-          </ul></li>
-        </ul>
-        <form method="get" type="text" required id="i25uu" class="d-flex">
-         <input type="search" required placeholder="Search" aria-label="Search" class="form-control me-2"><button type="submit" class="btn btn-outline-success">Search</button>
-        </form>
-       </div>
-      </div>
-     </nav>
+  <div class="col" id="i2nbx">
+   <nav class="navbar navbar-expand-lg border navbar-dark" id="i7vtd">
+    <div class="container-fluid">
+     <a href="#" class="navbar-brand">Navbar</a>
+     <div type="button" data-bs-toggle="collapse" data-bs-target="#collapse-68b2c93a-1b8e-4166-a4eb-db4d4e41902a" aria-controls="collapse-68b2c93a-1b8e-4166-a4eb-db4d4e41902a" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+      <span class="navbar-toggler-icon" id="iumd9"></span>
+     </div>
+     <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       <li class="nav-item"><a aria-current="page" href="#" class="nav-link active">Home</a></li>
+       <li class="nav-item"><a href="#" class="nav-link" id="i1f7o">About</a></li>
+       <li class="nav-item dropdown">
+        <ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+         <li><a href="#" class="dropdown-item">Action</a></li>
+         <li><a href="#" class="dropdown-item">Another action</a></li>
+         <li>
+          <hr class="dropdown-divider"></li>
+         <li><a href="#" class="dropdown-item">Something else here</a></li>
+        </ul></li>
+      </ul>
+      <form method="get" class="d-flex">
+       <input type="search" placeholder="Search" aria-label="Search" class="form-control me-2"><button type="submit" class="btn btn-outline-success">Search</button>
+      </form>
+     </div>
     </div>
-   </div>
+   </nav>
   </div>
-  <div id="in1h6" class="container"></div>
-  <p id="ieq4u" class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-  <div id="io1cd" class="col">
-   <section id="i1iey" class="bdg-sect">
-    <h1 id="iigw5" class="heading">My About page</h1>
-   </section>
-   <div id="il2rk" class="row p-2 row-cols-1 row-cols-sm-2 row-cols-md-1"></div>
-  </div>
-  <script>var props = {"i25uu":{"name":"","target":"_self","method":"POST","url":"https://stgapi.shopiana.in/api/v1/wbWebsite/1900/form/formData?store=myweb23080202","emailenable":false}};
-          var ids = Object.keys(props).map(function(id) { return '#'+id }).join(',');
-          var els = document.querySelectorAll(ids);
-          for (var i = 0, len = els.length; i < len; i++) {
-            var el = els[i];
-            (function ({ name, target, method, url, emailenable }) {
-        // const submitButton = this.querySelector('[type=submit]'); // Find the submit button
-        if (name) {
-            const form = this;
-            this.addEventListener('submit', (e) => {
-                e.preventDefault(); // Prevent the default form submission
-                // Create a new FormData object
-                const formData = new FormData(form);
-                formData.append('emailEnabled', emailenable);
-                formData.append('formName', name);
-                // Perform an API call using fetch and Promises
-                fetch(url, {
-                    method: method,
-                    // headers: {
-                    //     'Content-Type': 'application/json',
-                    // },
-                    body: formData,
-                })
-                    .then(response => {
-                    if (response.ok) {
-                        // API call successful
-                        return response.json();
-                    }
-                    else {
-                        // API call failed
-                        throw new Error('API call failed');
-                    }
-                })
-                    .then(responseData => {
-                    console.log('API response:', responseData);
-                    // Your custom script logic here
-                })
-                    .catch(error => {
-                    console.error('Error during API call:', error);
-                });
-            });
-            // }
-        }
-        else {
-            console.log('somthing went wrong');
-        }
-    }.bind(el))(props[el.id]);
-          }</script>
  </body>
 </html>
 </html>
