@@ -66,7 +66,7 @@
 
 <style type="text/css">
 
-* { box-sizing: border-box; } body {margin: 0;}#i79n{background-color:#212f3c;}#imh1gi{padding:10px;color:white;border:1px solid white;}#iqhuah{padding:10px;}#igyc0l{padding:10px;color:white;border:1px solid white;display:none;}#iptvwl{padding:10px;color:white;border:1px solid white;display:none;}#iti62s{height:56px;background-color:green;}@media (max-width: 768px){#imh1gi{display:none;}#igyc0l{display:block;}}@media (max-width: 576px){#igyc0l{display:none;}#iptvwl{display:block;}#iti62s{background-color:yellow;}}@media (max-width: 380px){#iti62s{background-color:navy;}}
+* { box-sizing: border-box; } body {margin: 0;}#i79n{background-color:#212f3c;}#irik4j{color:white;}#i2e295{color:white;}#ittd43{color:white;}#isj0ll{color:white;}
 
 </style>
 
@@ -74,22 +74,77 @@
 		<html>
  <head></head>
  <body id="i79n">
-  <div id="i5x98o" class="col">
-   <div id="imh1gi">
-    Laptop screen
+  <div class="container">
+   <div class="row p-2 row-cols-1 row-cols-sm-2 row-cols-md-1">
+    <div class="col">
+     <form id="ihuvwr">
+      <div class="mb-3">
+       <label for="email" id="irik4j" class="form-label">Email address</label><input type="email" required id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Enter you email" class="form-control">
+       <div id="emailHelp" class="form-text">
+        We'll never share your email with anyone else.
+       </div>
+      </div>
+      <div class="mb-3" id="ifwrei">
+       <label for="password" id="i2e295" class="form-label">Password</label><input type="password" required id="exampleInputPassword1" name="password" placeholder="Enter your password" class="form-control">
+      </div>
+      <div class="mb-3" id="i0slgy">
+       <label for="password" class="form-label" id="isj0ll">Choose file</label><input type="file" required name="password" placeholder="Enter your password" id="iahc9y" class="form-control">
+      </div>
+      <div class="mb-3 form-check">
+       <input type="checkbox" id="exampleCheck1" class="form-check-input"><label for="exampleCheck1" class="form-check-label" id="ittd43">Check me out</label>
+      </div><button type="submit" class="btn btn-primary" id="i770ki">Submit</button>
+     </form>
+    </div>
    </div>
-   <div id="igyc0l">
-    Tablet screen
-   </div>
-   <div id="iptvwl">
-    Phone screen
-   </div>
-   <div id="iqhuah"></div>
   </div>
-  <div id="i89xfm" class="col">
-   <div id="ihmj44" class="container-fluid"></div>
-  </div>
-  <div class="col" id="iti62s"></div>
+  <script>var props = {"ihuvwr":{"name":"","target":"_self","method":"POST","url":"https://stgapi.shopiana.in/api/v1/wbWebsite/1900/form/formData?store=myweb23080202","emailenable":false}};
+          var ids = Object.keys(props).map(function(id) { return '#'+id }).join(',');
+          var els = document.querySelectorAll(ids);
+          for (var i = 0, len = els.length; i < len; i++) {
+            var el = els[i];
+            (function ({ name, target, method, url, emailenable }) {
+        // const submitButton = this.querySelector('[type=submit]'); // Find the submit button
+        if (name) {
+            const form = this;
+            this.addEventListener('submit', (e) => {
+                e.preventDefault(); // Prevent the default form submission
+                // Create a new FormData object
+                const formData = new FormData(form);
+                formData.append('emailEnabled', emailenable);
+                formData.append('formName', name);
+                // Perform an API call using fetch and Promises
+                fetch(url, {
+                    method: method,
+                    // headers: {
+                    //     'Content-Type': 'application/json',
+                    // },
+                    body: formData,
+                })
+                    .then(response => {
+                    if (response.ok) {
+                        // API call successful
+                        return response.json();
+                    }
+                    else {
+                        // API call failed
+                        throw new Error('API call failed');
+                    }
+                })
+                    .then(responseData => {
+                    console.log('API response:', responseData);
+                    // Your custom script logic here
+                })
+                    .catch(error => {
+                    console.error('Error during API call:', error);
+                });
+            });
+            // }
+        }
+        else {
+            console.log('somthing went wrong');
+        }
+    }.bind(el))(props[el.id]);
+          }</script>
  </body>
 </html>
 </html>
