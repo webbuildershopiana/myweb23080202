@@ -66,7 +66,7 @@
 
 <style type="text/css">
 
-* { box-sizing: border-box; } body {margin: 0;}
+* { box-sizing: border-box; } body {margin: 0;}#i79n{background-color:#303079;}
 
 </style>
 
@@ -74,80 +74,14 @@
 		<html>
  <head></head>
  <body id="i79n">
-  <nav class="navbar navbar-expand-lg navbar-light border" id="i6bfu">
-   <div class="container-fluid">
-    <a href="#" class="navbar-brand">Navbar</a>
-    <div id="toggle-1ec6171e-52aa-4d2f-b342-7b6835e91201" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1ec6171e-52aa-4d2f-b342-7b6835e91201" aria-controls="collapse-1ec6171e-52aa-4d2f-b342-7b6835e91201" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
-     <span class="navbar-toggler-icon"></span>
-    </div>
-    <div id="collapse-1ec6171e-52aa-4d2f-b342-7b6835e91201" class="collapse navbar-collapse">
-     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item"><a aria-current="page" href="#" class="nav-link active">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-      <li class="nav-item dropdown"><a href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle"> Dropdown </a>
-       <ul aria-labelledby="navbarDropdown" class="dropdown-menu">
-        <li><a href="#" class="dropdown-item">Action</a></li>
-        <li><a href="#" class="dropdown-item">Another action</a></li>
-        <li>
-         <hr class="dropdown-divider"></li>
-        <li><a href="#" class="dropdown-item">Something else here</a></li>
-       </ul></li>
-      <li class="nav-item"><a href="#" tabindex="-1" aria-disabled="true" class="nav-link disabled">Disabled</a></li>
-     </ul>
-     <form id="ihdlw" class="d-flex">
-      <input type="search" required placeholder="Search" aria-label="Search" class="form-control me-2"><button type="submit" class="btn btn-outline-success">Search</button>
-     </form>
-    </div>
+  <div id="carouselExampleCaptions-61fd5100-c799-454e-b774-321958731c0a" data-bs-ride="carousel" class="carousel slide">
+   <div type="button" data-bs-target="#carouselExampleCaptions-61fd5100-c799-454e-b774-321958731c0a" data-bs-slide="prev" class="carousel-control-prev" id="iuroh">
+    <span aria-hidden="true" class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span>
    </div>
-  </nav>
-  <script>var props = {"ihdlw":{"name":"","target":"_self","method":"POST","url":"https://stgapi.shopiana.in/api/v1/wbWebsite/1900/form/formData?store=myweb23080202","emailenable":false}};
-          var ids = Object.keys(props).map(function(id) { return '#'+id }).join(',');
-          var els = document.querySelectorAll(ids);
-          for (var i = 0, len = els.length; i < len; i++) {
-            var el = els[i];
-            (function ({ name, target, method, url, emailenable }) {
-        // const submitButton = this.querySelector('[type=submit]'); // Find the submit button
-        if (name) {
-            const form = this;
-            this.addEventListener('submit', (e) => {
-                e.preventDefault(); // Prevent the default form submission
-                // Create a new FormData object
-                const formData = new FormData(form);
-                formData.append('emailEnabled', emailenable);
-                formData.append('formName', name);
-                // Perform an API call using fetch and Promises
-                fetch(url, {
-                    method: method,
-                    // headers: {
-                    //     'Content-Type': 'application/json',
-                    // },
-                    body: formData,
-                })
-                    .then(response => {
-                    if (response.ok) {
-                        // API call successful
-                        return response.json();
-                    }
-                    else {
-                        // API call failed
-                        throw new Error('API call failed');
-                    }
-                })
-                    .then(responseData => {
-                    console.log('API response:', responseData);
-                    // Your custom script logic here
-                })
-                    .catch(error => {
-                    console.error('Error during API call:', error);
-                });
-            });
-            // }
-        }
-        else {
-            console.log('somthing went wrong');
-        }
-    }.bind(el))(props[el.id]);
-          }</script>
+   <div type="button" data-bs-target="#carouselExampleCaptions-61fd5100-c799-454e-b774-321958731c0a" data-bs-slide="next" id="int9c" class="carousel-control-next">
+    <span aria-hidden="true" class="carousel-control-next-icon" id="iy77i"></span><span class="visually-hidden">Next</span>
+   </div>
+  </div>
  </body>
 </html>
 </html>
