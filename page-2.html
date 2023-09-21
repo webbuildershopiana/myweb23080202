@@ -71,13 +71,54 @@
 
 <style type="text/css">
 
-* { box-sizing: border-box; } body {margin: 0;}li{list-style-position:initial;list-style-image:initial;list-style-type:none;}a{text-decoration-line:none;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;}@media only screen and (max-width: 768px){.hamburger.active .bar:nth-child(2){opacity:0;}.hamburger.active .bar:nth-child(1){transform:translateY(8px) rotate(45deg);}.hamburger.active .bar:nth-child(3){transform:translateY(-8px) rotate(-45deg);}}
+* { box-sizing: border-box; } body {margin: 0;}li{list-style-position:initial;list-style-image:initial;list-style-type:none;}a{text-decoration-line:none;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;}.header{border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(226, 232, 240);}.navbar{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-right:1.5rem;padding-bottom:1rem;padding-left:1.5rem;position:relative;}.hamburger{display:none;}.bar{display:block;width:25px;height:3px;margin-top:5px;margin-right:auto;margin-bottom:5px;margin-left:auto;transition-duration:0.3s;transition-timing-function:ease-in-out;transition-delay:0s;transition-property:all;background-color:rgb(16, 16, 16);}.nav-menu{display:flex;justify-content:space-between;align-items:center;z-index:2000;}.nav-item{margin-left:5rem;}.nav-link{font-size:1.6rem;font-weight:400;color:rgb(71, 85, 105);}.nav-link:hover{color:rgb(72, 47, 247);}.nav-logo{font-size:2.1rem;font-weight:500;color:rgb(72, 47, 247);}@media only screen and (max-width: 768px){.nav-menu{position:absolute;left:-100%;top:5rem;flex-direction:column;background-color:rgb(255, 255, 255);width:100%;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-right-radius:10px;border-bottom-left-radius:10px;text-align:center;transition-duration:0.3s;transition-timing-function:ease;transition-delay:0s;transition-property:all;box-shadow:rgba(0, 0, 0, 0.05) 0px 10px 27px;}.nav-menu.active{left:0px;}.nav-item{margin-top:2.5rem;margin-right:0px;margin-bottom:2.5rem;margin-left:0px;}.hamburger{display:block;cursor:pointer;}.hamburger.active .bar:nth-child(2){opacity:0;}.hamburger.active .bar:nth-child(1){transform:translateY(8px) rotate(45deg);}.hamburger.active .bar:nth-child(3){transform:translateY(-8px) rotate(-45deg);}}
 
 </style>
 
 </head>
 		<html>
  <head></head>
- <body id="iagwrq"></body>
+ <body id="iagwrq">
+  <div id="i4f91">
+   <header class="header">
+    <nav class="navbar">
+     <a href="#" class="nav-logo">WebDev.</a>
+     <ul class="nav-menu">
+      <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+     </ul>
+     <div class="hamburger">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+     </div>
+    </nav>
+   </header>
+  </div>
+  <script>var items = document.querySelectorAll('#i4f91');
+          for (var i = 0, len = items.length; i < len; i++) {
+            (function(){
+// alert("Hi");
+        console.log("the element", this);
+        const hamburger = document.querySelectorAll(".hamburger");
+        const navMenu = document.querySelectorAll(".nav-menu");
+        console.log(hamburger);
+        for (let i = 0; i < hamburger.length; i++) {
+            hamburger[i].addEventListener("click", function () {
+                hamburger[i].classList.toggle("active");
+                navMenu[i].classList.toggle("active");
+            });
+        }
+        ;
+        // const navLink = document.querySelectorAll(".nav-link");
+        // // For close hambuger menu after click on any link
+        // navLink.forEach(n => n.addEventListener("click", closeMenu));
+        // function closeMenu() {
+        //     hamburger.classList.remove("active");
+        //     navMenu.classList.remove("active");
+        // }
+}.bind(items[i]))();
+          }</script>
+ </body>
 </html>
 </html>
